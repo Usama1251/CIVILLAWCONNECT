@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+        }
+        
+        .container {
+            text-align: center;
+            background-color: #fff; /* White background for the container */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the container */
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007bff; /* Blue color for the link */
+            font-weight: bold;
+        }
+        
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if username %}
+            <p>Goodbye, {{ username }}!</p>
+        {% else %}
+            <p>Logging out...</p>
+        {% endif %}
+        <a href="/login_p/">Login Here Again</a>
+    </div>
+</body>
+</html>
+
